@@ -1,0 +1,58 @@
+
+/* GENERAL STYLING */
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url("Fonts/Lexend.ttf");
+}
+
+body {
+    margin: 0;
+}
+
+.main {
+    margin: 8px;
+    margin-top: 50px;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    position:fixed;
+    display:flex;
+    top:0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: flex;
+    align-items: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar img {
+    float: left;
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.navbar .header-name {
+    float: left;
+    display: flex;
+    align-items: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 0px;
+    text-decoration: none;
+
+    font-size: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+}
