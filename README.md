@@ -1,4 +1,2 @@
-# Website
- Just the source code for my website
 
- Nothing to see here
+![](https://media.discordapp.net/attachments/962363240493506650/1204318907264147466/8c81568bacf2702724f00b520c05518c.gif?ex=667674e2&is=66752362&hm=6a38b8d766296057a2eef29062c268f66544a41a0145a367b1a675e86aaeae0b&=&width=662&height=671)
