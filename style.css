@@ -147,16 +147,12 @@ main {
 .img-wrapper {
     display: flex;
     width: 50%;
-    align-content: center;
-    justify-content: flex-start; 
+
+    background-size: cover;
+    background-position: bottom;
     
 }
-.img-wrapper > img {
-    height:100%;
-    width: 100%;
 
-    object-fit:cover;
-}
 .info {
     display: flex;
     flex-direction: column;
