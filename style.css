@@ -1,6 +1,5 @@
-
 /* GENERAL STYLING */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap");
 
 @keyframes scaleUpNavbar {
     0% {
@@ -20,15 +19,27 @@
     }
 }
 
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("Fonts/SF-Pro-Display-Light.otf");
+}
+
+@font-face {
+    font-family: "SF Pro Display Bold";
+    src: url("Fonts/SF-Pro-Display-Bold.otf");
+}
+
 * {
     margin: 0 auto;
 
-    font-family:monospace;
+    font-family: "SF Pro Display";
     color: #f2f2f2;
 }
 
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3 {
+    font-family: "SF Pro Display Bold", sans-serif;
 }
 
 html {
@@ -49,20 +60,21 @@ main {
 
 /* NAVIGATION BAR */
 .navbar * {
-    margin:0;
-    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-family: "SF Pro Display", sans-serif;
+    font-weight: 200;
 }
 
 .navbar {
-    position:fixed;
-    display:flex;
-    top:0;
+    position: fixed;
+    display: flex;
+    top: 0;
     overflow: hidden;
-    background-color: rgba(47, 41, 53, 0.8);   
+    background-color: rgba(47, 41, 53, 0.8);
     backdrop-filter: blur(10px);
     width: 100%;
 
-    height: 50px;
+    height: 40px;
 }
 
 .navbar a {
@@ -70,17 +82,17 @@ main {
     align-items: center;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 10px;
     text-decoration: none;
     background: none;
     margin: 0;
 
-    animation: scaleDownNavbar 0.25s ease-in;
+    /* animation: scaleDownNavbar 0.25s ease-in; */
 }
 
 .navbar a:hover {
-    transform: scale(1.1);
-    animation: scaleUpNavbar 0.25s ease-in;
+    /* transform: scale(1.1); */
+    /* animation: scaleUpNavbar 0.25s ease-in; */
 }
 
 .navbar img {
@@ -88,13 +100,13 @@ main {
     align-items: center;
     text-decoration: none;
     background: none;
-    height:100%;
+    height: 100%;
 }
 
 .navbar .header-name {
     display: flex;
     justify-content: center;
-    padding-left: 10px;
+    padding-left: 6px;
     padding-right: 0px;
     height: 100%;
     align-items: center;
@@ -103,29 +115,29 @@ main {
 
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* FOOTER */
 .footer {
-    display:flex;
-    position:relative;
-    height:10%;
-    width:100%;
+    display: flex;
+    position: relative;
+    height: 10%;
+    width: 100%;
     padding: 1%;
     justify-content: center;
 
-    background-color: #BAA694;
+    background-color: #baa694;
 
-    color:#1b1b1b;
+    color: #1b1b1b;
 }
 
 /* TITLE */
 .title {
     display: flex;
-    flex:0 0 100%;
-    max-height:50%;
-    width:100%;
+    flex: 0 0 100%;
+    max-height: 50%;
+    width: 100%;
     align-items: center;
     justify-content: center;
 
@@ -139,10 +151,9 @@ main {
 /* ROW */
 .row {
     display: flex;
-    flex:0 0 100%;
-    max-height:50%;
-    width:100%;
-    
+    flex: 0 0 100%;
+    max-height: 50%;
+    width: 100%;
 }
 .img-wrapper {
     display: flex;
@@ -150,15 +161,14 @@ main {
 
     background-size: cover;
     background-position: bottom;
-    
 }
 
 .info {
     display: flex;
     flex-direction: column;
-    width:50%;
+    width: 50%;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     padding: 5%px;
 
     background-color: #1b1b1b;
@@ -169,7 +179,7 @@ main {
 .info p {
     padding-left: 10%;
     padding-right: 10%;
-    text-align: center;    
+    text-align: center;
 
     background-color: transparent;
 }
@@ -177,7 +187,7 @@ main {
     display: flex;
     width: 50%;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 
-    background-color: #5380AA;
+    background-color: #5380aa;
 }
