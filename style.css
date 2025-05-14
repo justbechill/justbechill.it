@@ -161,7 +161,7 @@ main {
     width: 50%;
 
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
 }
 
 .info {
@@ -191,4 +191,28 @@ main {
     justify-content: center;
 
     background-color: #5380aa;
+}
+
+/* IMAGE GALLERY FORMATTING */
+div.gallery {
+}
+
+div.gallery:hover {
+    filter: brightness(1.1);
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.a {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.responsive {
+    float: left;
+    width: 100%;
+    height: auto;
 }
