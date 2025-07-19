@@ -164,7 +164,7 @@ main {
     width: 100%;
 }
 .row a:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.1);
 }
 .img-wrapper {
     display: flex;
@@ -206,10 +206,11 @@ main {
 /* IMAGE GALLERY FORMATTING */
 .gallery {
     line-height: 0;
+    border: #f2f2f2 solid 1px;
 }
 
 .gallery:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.1);
 }
 
 .gallery img {
