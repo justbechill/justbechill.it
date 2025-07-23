@@ -149,6 +149,9 @@ main {
     text-shadow: 2px 2px 0 #000;
     font-size: xxx-large;
 }
+.title p {
+    font-size: large;
+}
 
 /* ROW */
 .row {
@@ -187,7 +190,7 @@ main {
     line-height: 170%;
     font-size: 18px;
 }
-.info p {
+p {
     padding-left: 10%;
     padding-right: 10%;
     text-align: center;
