@@ -122,14 +122,22 @@ main {
 /* FOOTER */
 .footer {
     display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
     position: relative;
-    height: 10%;
+    height: 3%;
     width: 100%;
     padding: 1%;
     justify-content: center;
+    text-align: center;
 
     background-color: #baa694;
 
+    color: #1b1b1b;
+}
+
+.footer a {
     color: #1b1b1b;
 }
 
@@ -157,6 +165,7 @@ main {
 .row {
     display: flex;
     flex: 0 0 100%;
+    flex-direction: row;
     max-height: 50%;
     width: 100%;
 }
