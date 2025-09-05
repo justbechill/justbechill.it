@@ -1,19 +1,19 @@
 /* GENERAL STYLING */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap");
-/* @import url("https://justbechill.it/Fonts/SF-Pro-Display-Medium.otf"); */
+/* @import url("https:///Fonts/SF-Pro-Display-Medium.otf"); */
 
 @keyframes scaleUpNavbar {
     0% {
         transform: scale(1);
     }
     100% {
-        transform: scale(1.1);
+        transform: scale(1.03);
     }
 }
 
 @keyframes scaleDownNavbar {
     0% {
-        transform: scale(1.1);
+        transform: scale(1.03);
     }
     100% {
         transform: scale(1);
@@ -92,8 +92,8 @@ main {
 }
 
 .navbar a:hover {
-    /* transform: scale(1.1); */
-    /* animation: scaleUpNavbar 0.25s ease-in; */
+    transform: scale(1.03);
+    animation: scaleUpNavbar 0.1s ease-in;
 }
 
 .navbar img {
@@ -104,7 +104,7 @@ main {
     height: 100%;
 }
 
-.navbar .header-name {
+.navbar .navbar-name {
     display: flex;
     justify-content: center;
     padding-left: 6px;
