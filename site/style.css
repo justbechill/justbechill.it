@@ -132,12 +132,13 @@ main {
     justify-content: center;
     text-align: center;
 
-    background-color: #baa694;
+    background-color: #5380aa;
 
     color: #1b1b1b;
 }
 
-.footer a {
+.footer a,
+.footer p {
     color: #1b1b1b;
 }
 
@@ -166,7 +167,6 @@ main {
     display: flex;
     flex: 0 0 100%;
     flex-direction: row;
-    max-height: 50%;
     width: 100%;
 }
 .row a {
