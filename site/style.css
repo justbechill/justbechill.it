@@ -75,7 +75,7 @@ main {
     overflow: hidden;
     background-color: rgba(60, 50, 60, 0.4);
     backdrop-filter: blur(40px);
-    width: 100%;
+    width: 100vw;
 
     height: 40px;
 }
@@ -128,9 +128,9 @@ main {
     flex: 1 1 auto;
 
     position: relative;
-    height: 3%;
-    width: 100%;
-    padding: 1%;
+    max-height: 5vh;
+    width: 100vw;
+    padding: 1.2vh;
     justify-content: center;
     text-align: center;
 
