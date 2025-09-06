@@ -21,7 +21,7 @@ document.querySelector("main").innerHTML += footerString;
 var navbarString = `
   <div class="navbar">
     <img src="/photos/icon.svg" />
-    <div class="navbar-name"><a href="./">justbechill</a></div>
+    <div class="navbar-name"><a href="/">justbechill</a></div>
 
     <a href="/photos">Photos</a>
     <a href="/music">Music</a>
