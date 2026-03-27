@@ -1,33 +1,66 @@
-function greetUser(name) {
-  alert("Hello, " + name + "!");
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("photoModal");
+    const modalImg = document.getElementById("expandedImg");
+    const grid = document.getElementById("photo-grid");
 
-// FOOTER AND NAVBAR SHENANIGANS
-var footerString = `
-  <div class="footer">
-    <p>
-      All photographs on this website are under a
-      <a
-        href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-      >
-        CC BY-NC-SA 4.0 License
-      </a>
-    </p>
-  </div>`;
+    // FUNCTION TO OPEN MODAL
+    function openModal(fullPath) {
+        // Changing this to 'flex' centers the image based on our CSS
+        modal.style.display = "flex"; 
+        modalImg.src = fullPath;
+    }
 
-//INSERT FOOTER AT THE END OF THE DOCUMENT
-document.querySelector("main").innerHTML += footerString;
+    // CLOSE LOGIC
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
 
-var navbarString = `
-  <div class="navbar">
-    <img src="/photos/icon.svg" />
-    <div class="navbar-name"><a href="/">justbechill</a></div>
+    // Ensure 'X' button also works if it exists
+    const closeBtn = document.querySelector(".close");
+    if (closeBtn) {
+        closeBtn.onclick = () => {
+            modal.style.display = "none";
+        };
+    }
 
-    <a href="/photos/">Photos</a>
-    <a href="/music/">Music</a>
-    <a href="/movies/">Movies</a>
-  </div>`;
+    async function loadImagesSequentially(maxCount) {
+        const imagePromises = [];
 
-//INSERT NAVBAR AT THE START OF THE DOCUMENT
-document.querySelector("main").innerHTML =
-  navbarString + document.querySelector("main").innerHTML;
+        for (let i = 1; i <= maxCount; i++) {
+            const imgNum = i.toString().padStart(2, '0');
+            const thumbPath = `compressed/${imgNum}.webp`;
+            const fullPath = `${imgNum}.JPG`;
+
+            const promise = new Promise((resolve) => {
+                const img = new Image();
+                img.src = thumbPath;
+                
+                img.onload = () => {
+                    const galleryDiv = document.createElement("div");
+                    galleryDiv.className = "gallery";
+                    galleryDiv.innerHTML = `<img src="${thumbPath}" alt="Japan Photo">`;
+                    
+                    // Trigger our updated openModal function
+                    galleryDiv.onclick = () => openModal(fullPath);
+                    resolve({ element: galleryDiv, index: i });
+                };
+
+                img.onerror = () => resolve(null);
+            });
+
+            imagePromises.push(promise);
+        }
+
+        const results = await Promise.all(imagePromises);
+
+        results.forEach(result => {
+            if (result && result.element) {
+                grid.appendChild(result.element);
+            }
+        });
+    }
+
+    loadImagesSequentially(50);
+});
