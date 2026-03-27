@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 1; i <= maxCount; i++) {
             const imgNum = i.toString().padStart(2, '0');
             const thumbPath = `compressed/${imgNum}.webp`;
-            const fullPath = `${imgNum}.JPG`;
+            const fullPath = `${imgNum}.jpg`;
 
             const promise = new Promise((resolve) => {
                 const img = new Image();

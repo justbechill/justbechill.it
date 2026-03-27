@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Photos - San Diego</title>
+        <link rel="stylesheet" href="/style.css" />
+        <link rel="icon" href="/photos/icon.svg" />
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+
+    <body>
+        <main>
+            <!-- TITLE -->
+            <div
+                class="title"
+                style="
+                    background-color: #1b1b1b;
+                    background-position-y: 50%;
+                    max-height: 40%;
+                "
+            >
+                <h3>San Diego</h3>
+                Fall 2025
+
+                <p>
+                    <br />
+                    <br />
+                    Most of these are taken in the San Deigo area on my Sony
+                    a6400.
+                </p>
+            </div>
+
+            <div id="photo-grid"></div>
+
+            <div id="photoModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="expandedImg">
+                <div id="caption"></div>
+            </div>
+        </main>
+
+        <script src="/script.js"></script>
+        <script src="/footer.js"></script>
+    </body>
+</html>
