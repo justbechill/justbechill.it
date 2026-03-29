@@ -48,12 +48,13 @@ h3 {
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+
+    background-image: url("/photos/japan/21.jpg");
 }
 
 main {
     display: flex;
     flex-direction: column;
-
     position: absolute;
     top: 0;
     bottom: 0;
@@ -73,9 +74,10 @@ main {
     display: flex;
     top: 0;
     overflow: hidden;
-    background-color: rgba(60, 50, 60, 0.4);
+    background-color: rgba(27, 22, 27, 0.6);
     backdrop-filter: blur(40px);
     width: 100vw;
+    z-index: 999;
 
     height: 40px;
 }
@@ -156,7 +158,8 @@ main {
 
     background-size: cover;
     background-position: bottom;
-    background-color: #1b1b1b;
+    background-color: rgba(27,27,27,0.8);
+    backdrop-filter: blur(40px);
 
     text-shadow: 2px 2px 0 #000;
     font-size: xx-large;
@@ -201,7 +204,8 @@ main {
     justify-content: center;
     padding: 5%px;
 
-    background-color: #1b1b1b;
+    background-color: rgba(27,27,27,0.8);
+    backdrop-filter: blur(40px);
 
     line-height: 170%;
     font-size: 18px;
@@ -230,7 +234,7 @@ p {
     /* Sets the horizontal gap between columns */
     column-gap: 5px; 
     padding: 5px;
-    background-color: #f2f2f2;
+    background-color: #1b1b1b;
     width: 100%;
     box-sizing: border-box;
 }
