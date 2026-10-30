@@ -1,0 +1,31 @@
+---
+import { photoPath, thumbnail, type Album } from '../data/albums';
+interface Props { album: Album; }
+const { album } = Astro.props;
+---
+<section class="gallery" aria-label={`${album.title} photographs`} data-gallery>
+  <div class="photo-grid">
+    {album.photos.map((photo, index) => (
+      <figure>
+        <a class="photo-link" href={photoPath(album, photo.filename)} data-photo data-caption={photo.caption || ''} aria-label={`Open ${photo.alt}`}>
+          <img src={thumbnail(album, photo).thumbnailUrl} width={thumbnail(album, photo).width} height={thumbnail(album, photo).height} alt={photo.alt} loading={index < 4 ? 'eager' : 'lazy'} decoding="async" />
+        </a>
+        {photo.caption && <figcaption>{photo.caption}</figcaption>}
+      </figure>
+    ))}
+  </div>
+  <dialog class="lightbox" aria-label={`${album.title} photo viewer`}>
+    <div class="lightbox-toolbar">
+      <p data-status role="status" aria-live="polite"></p>
+      <a data-original>Open original</a>
+      <button type="button" data-close autofocus aria-label="Close photo viewer">Close ×</button>
+    </div>
+    <div class="lightbox-stage"><img data-expanded alt="" /></div>
+    <p data-caption-text class="lightbox-caption"></p>
+    <div class="lightbox-controls">
+      <button type="button" data-previous aria-label="Previous photo">← Previous</button>
+      <button type="button" data-next aria-label="Next photo">Next →</button>
+    </div>
+  </dialog>
+</section>
+<script>import '../scripts/gallery.js';</script>
