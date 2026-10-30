@@ -18,7 +18,7 @@
   --muted: #d0c9c3;
   --surface: #222;
   --border: #ffffff18;
-  --radius: 1rem;
+  --radius: 0.5rem;
   --page-width: 1200px;
 }
 * {
@@ -353,7 +353,7 @@ img {
   display: block;
   min-height: 3rem;
   background: var(--surface);
-  border-radius: 0.65rem;
+  border-radius: 0.325rem;
   overflow: hidden;
 }
 .photo-link img {
@@ -413,7 +413,7 @@ figcaption {
 .lightbox button {
   border: 1px solid #777;
   background: #242424;
-  border-radius: 0.25rem;
+  border-radius: 0.125rem;
   padding: 0.4rem 0.8rem;
   min-height: 44px;
 }

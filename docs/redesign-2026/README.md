@@ -29,7 +29,7 @@ No deployment or merge into `main` has been performed.
 
 ## 16:9 desktop captures
 
-Viewport screenshots at exactly 1920 × 1080 pixels:
+Updated viewport screenshots at exactly 1920 × 1080 pixels after halving all corner radii (cards and headers: 8px; gallery photos: 5.2px). The full-page captures above show the earlier corner treatment.
 
 - [Photos page](photos-1920x1080.png)
 - [Taiwan & Hong Kong gallery](taiwan-hk-1920x1080.png)
