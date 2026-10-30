@@ -4,31 +4,31 @@
   "date": "Summer 2026",
   "sortDate": "2026-09-04",
   "description": "I got the chance to visit my university friends in Taiwan and Hong Kong!",
-  "coverImage": "11.jpg",
+  "coverImage": "19.jpg",
   "photos": [
     {
       "filename": "01.jpg",
-      "alt": "A tall observation tower framed by flowering branches against a blue sky"
+      "alt": "A small illuminated street stall on a quiet lane at night"
     },
     {
       "filename": "02.jpg",
-      "alt": "Empty passenger seats beside sunlit ferry windows"
+      "alt": "A tall observation tower framed by flowering branches against a blue sky"
     },
     {
       "filename": "03.jpg",
-      "alt": "A motorcycle helmet resting on a parked scooter beside a city street"
+      "alt": "Empty passenger seats beside sunlit ferry windows"
     },
     {
       "filename": "04.jpg",
-      "alt": "Glowing Chinese characters in a restaurant window at night"
+      "alt": "A person holding a drink beside a brightly lit vending machine"
     },
     {
       "filename": "05.jpg",
-      "alt": "Passengers standing beside an open train door"
+      "alt": "A silhouetted person looking out toward a busy city street"
     },
     {
       "filename": "06.jpg",
-      "alt": "Commuters riding a long escalator inside a station"
+      "alt": "Passengers standing beside an open train door"
     },
     {
       "filename": "07.jpg",
@@ -40,51 +40,63 @@
     },
     {
       "filename": "09.jpg",
-      "alt": "A small illuminated street stall on a quiet lane at night"
-    },
-    {
-      "filename": "10.jpg",
-      "alt": "A person climbing a narrow tiled staircase in black and white"
-    },
-    {
-      "filename": "11.jpg",
       "alt": "Passengers waiting on a crowded platform beside a blue train"
     },
     {
-      "filename": "12.jpg",
-      "alt": "A silhouetted person looking out toward a busy city street"
+      "filename": "10.jpg",
+      "alt": "A motorcycle helmet resting on a parked scooter beside a city street"
     },
     {
-      "filename": "13.jpg",
-      "alt": "An illuminated city skyline reflected across the harbor at night"
-    },
-    {
-      "filename": "14.jpg",
-      "alt": "A vertical illuminated sign on a dark city building"
-    },
-    {
-      "filename": "15.jpg",
-      "alt": "People gathered outside a restaurant beneath a street sign"
-    },
-    {
-      "filename": "16.jpg",
+      "filename": "11.jpg",
       "alt": "A person looking through a circular opening toward the city in black and white"
     },
     {
-      "filename": "17.jpg",
-      "alt": "A person holding a drink beside a brightly lit vending machine"
+      "filename": "12.jpg",
+      "alt": "A person climbing a narrow tiled staircase in black and white"
     },
     {
-      "filename": "18.jpg",
-      "alt": "A wet city street reflecting the lights of nearby shops at night"
+      "filename": "13.jpg",
+      "alt": "Purple and green patterned leaves filling the frame"
     },
     {
-      "filename": "19.jpg",
+      "filename": "14.jpg",
       "alt": "A seated person resting their chin on their hand"
     },
     {
-      "filename": "20.jpg",
+      "filename": "15.jpg",
+      "alt": "A vertical illuminated sign on a dark city building"
+    },
+    {
+      "filename": "16.jpg",
       "alt": "Escalators descending toward a station concourse"
+    },
+    {
+      "filename": "17.jpg",
+      "alt": "An illuminated city skyline reflected across the harbor at night"
+    },
+    {
+      "filename": "18.jpg",
+      "alt": "Raindrops on glass against blurred red and white city lights"
+    },
+    {
+      "filename": "19.jpg",
+      "alt": "Glowing Chinese characters in a restaurant window at night"
+    },
+    {
+      "filename": "20.jpg",
+      "alt": "A wet city street reflecting the lights of nearby shops at night"
+    },
+    {
+      "filename": "21.JPG",
+      "alt": "People gathered outside a restaurant beneath a street sign"
+    },
+    {
+      "filename": "22.JPG",
+      "alt": "Commuters riding a long escalator inside a station"
+    },
+    {
+      "filename": "23.JPG",
+      "alt": "Densely packed apartment balconies with windows and air-conditioning units"
     }
   ]
 }
