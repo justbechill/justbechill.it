@@ -1,9 +1,9 @@
 ---
-interface Props { title: string; image: string; position?: string; subtitle?: string; }
-const { title, image, position = 'center', subtitle } = Astro.props;
+interface Props { title: string; image: string; position?: string; subtitle?: string; eyebrow?: string; }
+const { title, image, position = 'center', subtitle, eyebrow } = Astro.props;
 ---
 <section class="hero" aria-labelledby="page-title">
   <img class="hero-image" src={image} alt="" fetchpriority="high" style:define-vars={{ position }} />
-  <div><h1 id="page-title">{title}</h1>{subtitle && <p>{subtitle}</p>}</div>
+  <div>{eyebrow && <p class="eyebrow">{eyebrow}</p>}<h1 id="page-title">{title}</h1>{subtitle && <p>{subtitle}</p>}</div>
 </section>
 <style>.hero-image { object-position: var(--position); }</style>

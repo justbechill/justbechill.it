@@ -16,6 +16,10 @@
   --text: #f2f2f2;
   --sand: #b7a696;
   --muted: #d0c9c3;
+  --surface: #222;
+  --border: #ffffff18;
+  --radius: 1rem;
+  --page-width: 1200px;
 }
 * {
   box-sizing: border-box;
@@ -94,7 +98,9 @@ img {
   display: flex;
   align-items: center;
   gap: clamp(0.3rem, 2vw, 1.4rem);
-  padding: 0.35rem clamp(0.5rem, 2vw, 1.5rem);
+  padding: 0.55rem 1.5rem;
+  max-width: var(--page-width);
+  margin-inline: auto;
   flex-wrap: wrap;
 }
 .site-header a {
@@ -126,7 +132,12 @@ img {
   top: 1rem;
 }
 .hero {
-  min-height: clamp(18rem, 47svh, 34rem);
+  min-height: clamp(18rem, 40svh, 30rem);
+  max-width: calc(var(--page-width) - 3rem);
+  margin: 2rem auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
   display: grid;
   place-items: center;
   isolation: isolate;
@@ -146,11 +157,11 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: #0003;
+  background: linear-gradient(#0003, #1b1b1b99);
   z-index: -1;
 }
 .hero h1 {
-  text-shadow: 2px 2px #000;
+  text-shadow: 0 2px 16px #0008;
 }
 .hero p {
   margin-top: 0.75rem;
@@ -158,6 +169,12 @@ img {
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-width: calc(var(--page-width) - 3rem);
+  margin: 0 auto 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 .split > img {
   width: 100%;
@@ -167,7 +184,7 @@ img {
   object-fit: cover;
 }
 .intro {
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 42% 1fr;
 }
 .intro > img {
   object-position: 60% 50%;
@@ -175,11 +192,11 @@ img {
 .panel {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 1.5rem;
-  padding: clamp(2rem, 5vw, 5rem);
-  text-align: center;
+  gap: 1rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  text-align: left;
 }
 .text-link {
   font-weight: 700;
@@ -189,6 +206,10 @@ img {
   grid-template-columns: 1fr 1fr;
   text-decoration: none;
   min-height: 20rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 .album-card > img {
   width: 100%;
@@ -200,11 +221,11 @@ img {
 .album-card > div {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   gap: 0.8rem;
-  padding: 2.5rem 1.5rem;
+  padding: 2rem 2.5rem;
 }
 .album-card span {
   font-size: 1rem;
@@ -222,6 +243,10 @@ img {
 }
 .album-list {
   display: grid;
+  gap: 2rem;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
 }
 .projects-heading {
   display: grid;
@@ -239,16 +264,16 @@ img {
 .project-list {
   display: grid;
   gap: 2rem;
-  max-width: 1200px;
+  max-width: var(--page-width);
   margin: 0 auto;
   padding: 0 1.5rem 4rem;
 }
 .project-card {
   display: grid;
   grid-template-columns: 42% 1fr;
-  background: #222;
-  border: 1px solid #ffffff18;
-  border-radius: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   overflow: hidden;
 }
 .project-card figure {
@@ -298,7 +323,7 @@ img {
   .project-list { padding-inline: 1rem; }
 }
 .latest {
-  border-top: 1px solid #ffffff20;
+  padding-top: 0;
 }
 .album-heading {
   padding: clamp(2rem, 5vw, 5rem) 1.25rem;
@@ -317,7 +342,7 @@ img {
 .photo-grid {
   columns: 4;
   column-gap: 0.5rem;
-  padding: 0.5rem;
+  padding: 0;
 }
 .photo-grid figure {
   min-width: 0;
@@ -327,7 +352,9 @@ img {
 .photo-link {
   display: block;
   min-height: 3rem;
-  background: #252525;
+  background: var(--surface);
+  border-radius: 0.65rem;
+  overflow: hidden;
 }
 .photo-link img {
   width: 100%;
@@ -413,7 +440,11 @@ figcaption {
 .prose {
   max-width: 65ch;
   margin: auto;
-  padding: 3rem 1.25rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 2rem auto 4rem;
 }
 @media (max-width: 1000px) {
   .photo-grid {
@@ -462,4 +493,19 @@ figcaption {
   html {
     scroll-behavior: smooth;
   }
+}
+
+/* Shared framing follows the Projects cards while retaining each page layout. */
+.hero .eyebrow { margin: 0 0 0.8rem; }
+.gallery { max-width: var(--page-width); margin: 0 auto; padding: 0 1.5rem 4rem; }
+.album-heading { max-width: 800px; margin-inline: auto; }
+.album-heading .back-link { color: var(--sand); }
+.album-card .eyebrow { color: var(--sand); }
+.album-card h2, .panel h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
+.prose h1 { margin-bottom: 1.5rem; }
+@media (max-width: 700px) {
+  .hero { margin: 1rem; }
+  .split { margin: 0 1rem 1.5rem; }
+  .album-list, .gallery { padding-inline: 1rem; gap: 1.5rem; }
+  .prose { margin: 1rem 1rem 3rem; }
 }
