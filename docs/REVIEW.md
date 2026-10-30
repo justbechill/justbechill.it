@@ -4,7 +4,7 @@
 
 The previous site had five manually authored albums, repeated page scaffolding and inline layout styles, a footer script that reparsed all main content, and a gallery that waited for 50 probed image paths. Japan and Los Angeles originals use uppercase `.JPG`, while the gallery assumed lowercase `.jpg`. The road trip used separate markup. There was no tracked deployment configuration or workflow.
 
-The refactor keeps the charcoal background, SF Pro fonts, tan licensing footer, large photographic headers, alternating album rows, and natural-aspect masonry gallery. Shared page sections now use responsive Grid/Flexbox. Music and Movies are removed; Projects showcases public GitHub repositories, and the standalone 3.wav content is retained. The Images tab keeps the existing photo album URLs.
+The refactor keeps the charcoal background, SF Pro fonts, tan licensing footer, large photographic headers, alternating album rows, and natural-aspect masonry gallery. Shared page sections now use responsive Grid/Flexbox. Music and Movies are removed; Projects showcases public GitHub repositories, and the standalone 3.wav content is retained. The Photos tab keeps the existing photo album URLs.
 
 ## Verification performed
 
