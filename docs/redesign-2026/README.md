@@ -26,3 +26,10 @@ Captured from the production build using Chromium at 1440 × 1000 and 390 × 844
 - `git diff --check`: passed.
 
 No deployment or merge into `main` has been performed.
+
+## 16:9 desktop captures
+
+Viewport screenshots at exactly 1920 × 1080 pixels:
+
+- [Photos page](photos-1920x1080.png)
+- [Taiwan & Hong Kong gallery](taiwan-hk-1920x1080.png)
