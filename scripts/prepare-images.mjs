@@ -25,6 +25,19 @@ for (const album of albums) {
       height,
     };
   }
+  // Covers can be separate from gallery entries. Refresh them on every run so
+  // changing coverImage also updates the homepage and album listing.
+  const coverOutput = `site/_thumbnails/${album.slug}/cover.webp`;
+  const cover = await sharp(`site/photos/${album.slug}/${album.coverImage}`)
+    .rotate()
+    .resize({ width: 1600, withoutEnlargement: true })
+    .webp({ quality: 85 })
+    .toFile(coverOutput);
+  metadata[`${album.slug}/cover`] = {
+    thumbnailUrl: coverOutput.slice(4),
+    width: cover.width,
+    height: cover.height,
+  };
 }
 await mkdir(".astro", { recursive: true });
 await writeFile(".astro/photo-metadata.json", JSON.stringify(metadata));

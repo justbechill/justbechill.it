@@ -1,9 +1,10 @@
 ---
-import { photoPath, type Album } from '../data/albums';
+import { coverImage, type Album } from '../data/albums';
 interface Props { album: Album; }
 const { album } = Astro.props;
+const cover = coverImage(album);
 ---
 <a class="album-card" href={`/photos/${album.slug}/`}>
-  <img src={photoPath(album, album.coverImage)} alt="" loading="lazy" decoding="async" width="900" height="600" />
+  <img src={cover.thumbnailUrl} alt="" loading="lazy" decoding="async" width={cover.width} height={cover.height} />
   <div><h2>{album.title}</h2><p>{album.date}</p><span>{album.photos.length} photos <span aria-hidden="true">↗</span></span></div>
 </a>

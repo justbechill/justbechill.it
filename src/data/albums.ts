@@ -24,11 +24,15 @@ export const albums = Object.values(files).sort((a, b) =>
 export const photoPath = (album: Album, filename: string) =>
   `/photos/${album.slug}/${filename}`;
 
+const images = metadata as Record<
+  string,
+  { thumbnailUrl: string; width: number; height: number }
+>;
+
 export function thumbnail(album: Album, photo: Photo) {
-  return (
-    metadata as Record<
-      string,
-      { thumbnailUrl: string; width: number; height: number }
-    >
-  )[`${album.slug}/${photo.filename}`];
+  return images[`${album.slug}/${photo.filename}`];
+}
+
+export function coverImage(album: Album) {
+  return images[`${album.slug}/cover`];
 }
