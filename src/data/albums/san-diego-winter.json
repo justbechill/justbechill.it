@@ -1,0 +1,140 @@
+{
+  "slug": "san-diego-winter",
+  "title": "San Diego",
+  "date": "Winter 2026",
+  "sortDate": "2026-01-01",
+  "description": "Definitely didn't buy another camera... I did get to try out film photography (much more to come) which was super cool.",
+  "coverImage": "compressed/12.webp",
+  "photos": [
+    {
+      "filename": "01.jpg",
+      "thumbnail": "compressed/01.webp",
+      "alt": "San Diego \u2014 photo 01"
+    },
+    {
+      "filename": "02.jpg",
+      "thumbnail": "compressed/02.webp",
+      "alt": "San Diego \u2014 photo 02"
+    },
+    {
+      "filename": "03.jpg",
+      "thumbnail": "compressed/03.webp",
+      "alt": "San Diego \u2014 photo 03"
+    },
+    {
+      "filename": "04.jpg",
+      "thumbnail": "compressed/04.webp",
+      "alt": "San Diego \u2014 photo 04"
+    },
+    {
+      "filename": "05.jpg",
+      "thumbnail": "compressed/05.webp",
+      "alt": "San Diego \u2014 photo 05"
+    },
+    {
+      "filename": "06.jpg",
+      "thumbnail": "compressed/06.webp",
+      "alt": "San Diego \u2014 photo 06"
+    },
+    {
+      "filename": "07.jpg",
+      "thumbnail": "compressed/07.webp",
+      "alt": "San Diego \u2014 photo 07"
+    },
+    {
+      "filename": "09.jpg",
+      "thumbnail": "compressed/09.webp",
+      "alt": "San Diego \u2014 photo 09"
+    },
+    {
+      "filename": "10.jpg",
+      "thumbnail": "compressed/10.webp",
+      "alt": "San Diego \u2014 photo 10"
+    },
+    {
+      "filename": "11.jpg",
+      "thumbnail": "compressed/11.webp",
+      "alt": "San Diego \u2014 photo 11"
+    },
+    {
+      "filename": "12.jpg",
+      "thumbnail": "compressed/12.webp",
+      "alt": "San Diego \u2014 photo 12"
+    },
+    {
+      "filename": "13.jpg",
+      "thumbnail": "compressed/13.webp",
+      "alt": "San Diego \u2014 photo 13"
+    },
+    {
+      "filename": "14.jpg",
+      "thumbnail": "compressed/14.webp",
+      "alt": "San Diego \u2014 photo 14"
+    },
+    {
+      "filename": "15.jpg",
+      "thumbnail": "compressed/15.webp",
+      "alt": "San Diego \u2014 photo 15"
+    },
+    {
+      "filename": "16.jpg",
+      "thumbnail": "compressed/16.webp",
+      "alt": "San Diego \u2014 photo 16"
+    },
+    {
+      "filename": "18.jpg",
+      "thumbnail": "compressed/18.webp",
+      "alt": "San Diego \u2014 photo 18"
+    },
+    {
+      "filename": "19.jpg",
+      "thumbnail": "compressed/19.webp",
+      "alt": "San Diego \u2014 photo 19"
+    },
+    {
+      "filename": "20.jpg",
+      "thumbnail": "compressed/20.webp",
+      "alt": "San Diego \u2014 photo 20"
+    },
+    {
+      "filename": "21.jpg",
+      "thumbnail": "compressed/21.webp",
+      "alt": "San Diego \u2014 photo 21"
+    },
+    {
+      "filename": "22.jpg",
+      "thumbnail": "compressed/22.webp",
+      "alt": "San Diego \u2014 photo 22"
+    },
+    {
+      "filename": "23.jpg",
+      "thumbnail": "compressed/23.webp",
+      "alt": "San Diego \u2014 photo 23"
+    },
+    {
+      "filename": "24.jpg",
+      "thumbnail": "compressed/24.webp",
+      "alt": "San Diego \u2014 photo 24"
+    },
+    {
+      "filename": "25.jpg",
+      "thumbnail": "compressed/25.webp",
+      "alt": "San Diego \u2014 photo 25"
+    },
+    {
+      "filename": "26.jpg",
+      "thumbnail": "compressed/26.webp",
+      "alt": "San Diego \u2014 photo 26"
+    },
+    {
+      "filename": "27.jpg",
+      "thumbnail": "compressed/27.webp",
+      "alt": "San Diego \u2014 photo 27"
+    },
+    {
+      "filename": "28.jpg",
+      "thumbnail": "compressed/28.webp",
+      "alt": "San Diego \u2014 photo 28"
+    }
+  ]
+}

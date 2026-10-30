@@ -1,0 +1,465 @@
+@font-face {
+  font-family: SF Pro Display;
+  src: url("/Fonts/SF-Pro-Display-Medium.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: SF Pro Display;
+  src: url("/Fonts/SF-Pro-Display-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+:root {
+  color-scheme: dark;
+  --bg: #1b1b1b;
+  --text: #f2f2f2;
+  --sand: #b7a696;
+  --muted: #d0c9c3;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    SF Pro Display,
+    system-ui,
+    sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+  min-width: 0;
+}
+a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+:focus-visible {
+  outline: 3px solid var(--sand);
+  outline-offset: 4px;
+}
+h1,
+h2,
+p,
+figure {
+  margin: 0;
+}
+h1,
+h2 {
+  font-weight: 700;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+p {
+  max-width: 65ch;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(27, 22, 27, 0.58);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  backdrop-filter: blur(24px) saturate(160%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.3rem, 2vw, 1.4rem);
+  padding: 0.35rem clamp(0.5rem, 2vw, 1.5rem);
+  flex-wrap: wrap;
+}
+.site-header a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.5rem;
+  text-decoration: none;
+}
+.site-header .brand {
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  padding-left: 0;
+}
+.site-header a:hover,
+.site-header a[aria-current] {
+  color: var(--sand);
+}
+.skip-link {
+  position: fixed;
+  top: -6rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--sand);
+  color: var(--bg);
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+.hero {
+  min-height: clamp(18rem, 47svh, 34rem);
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  position: relative;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0003;
+  z-index: -1;
+}
+.hero h1 {
+  text-shadow: 2px 2px #000;
+}
+.hero p {
+  margin-top: 0.75rem;
+}
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.split > img {
+  width: 100%;
+  height: 100%;
+  min-height: 22rem;
+  max-height: 36rem;
+  object-fit: cover;
+}
+.intro {
+  grid-template-columns: 2fr 3fr;
+}
+.intro > img {
+  object-position: 60% 50%;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: clamp(2rem, 5vw, 5rem);
+  text-align: center;
+}
+.text-link {
+  font-weight: 700;
+}
+.album-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-decoration: none;
+  min-height: 20rem;
+}
+.album-card > img {
+  width: 100%;
+  height: 100%;
+  max-height: 32rem;
+  min-height: 20rem;
+  object-fit: cover;
+}
+.album-card > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.8rem;
+  padding: 2.5rem 1.5rem;
+}
+.album-card span {
+  font-size: 1rem;
+  color: var(--muted);
+}
+.album-card:nth-child(even) > img {
+  order: 2;
+}
+.album-card:hover img {
+  filter: brightness(1.1);
+}
+.album-card:hover h2 {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.album-list {
+  display: grid;
+}
+.projects-heading {
+  display: grid;
+  justify-items: center;
+  gap: 0.8rem;
+  padding: 3.5rem 1.25rem 3rem;
+  text-align: center;
+}
+.eyebrow {
+  color: var(--sand);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+.project-list {
+  display: grid;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+.project-card {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  background: #222;
+  border: 1px solid #ffffff18;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.project-card figure {
+  position: relative;
+  min-height: 20rem;
+}
+.project-card img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.project-card figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5rem 1rem 0.75rem;
+  background: linear-gradient(transparent, #000c);
+  font-size: 0.75rem;
+  color: #fff;
+}
+.project-details {
+  display: grid;
+  align-content: center;
+  gap: 0.75rem;
+  padding: 2rem 2.5rem;
+}
+.project-details h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
+.project-number {
+  margin-right: 0.8rem;
+  color: var(--muted);
+}
+.project-contribution {
+  color: var(--muted);
+  font-size: 1rem;
+}
+.project-contribution strong {
+  display: block;
+  color: var(--text);
+}
+@media (max-width: 700px) {
+  .project-card { grid-template-columns: 1fr; }
+  .project-card figure { min-height: 15rem; }
+  .project-details { padding: 1.5rem; }
+  .project-list { padding-inline: 1rem; }
+}
+.latest {
+  border-top: 1px solid #ffffff20;
+}
+.album-heading {
+  padding: clamp(2rem, 5vw, 5rem) 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+.album-date {
+  color: var(--muted);
+}
+.back-link {
+  font-size: 1rem;
+}
+.photo-grid {
+  columns: 4;
+  column-gap: 0.5rem;
+  padding: 0.5rem;
+}
+.photo-grid figure {
+  min-width: 0;
+  break-inside: avoid;
+  margin-bottom: 0.5rem;
+}
+.photo-link {
+  display: block;
+  min-height: 3rem;
+  background: #252525;
+}
+.photo-link img {
+  width: 100%;
+  height: auto;
+}
+.photo-link:hover {
+  filter: brightness(1.1);
+}
+figcaption {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.site-footer {
+  padding: 1.5rem;
+  background: var(--sand);
+  color: var(--bg);
+  text-align: center;
+  font-size: 1rem;
+}
+.site-footer p {
+  margin: auto;
+}
+.lightbox {
+  width: 100%;
+  max-width: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  border: 0;
+  padding: 1rem;
+  background: #101010f5;
+  color: var(--text);
+}
+.lightbox[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.lightbox::backdrop {
+  background: #000d;
+}
+.lightbox-toolbar,
+.lightbox-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.lightbox-toolbar {
+  justify-content: space-between;
+}
+.lightbox-toolbar a {
+  font-size: 1rem;
+}
+.lightbox button {
+  border: 1px solid #777;
+  background: #242424;
+  border-radius: 0.25rem;
+  padding: 0.4rem 0.8rem;
+  min-height: 44px;
+}
+.lightbox button:hover {
+  background: #444;
+}
+.lightbox-stage {
+  min-height: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-stage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.lightbox-caption {
+  text-align: center;
+  align-self: center;
+  font-size: 1rem;
+}
+.prose {
+  max-width: 65ch;
+  margin: auto;
+  padding: 3rem 1.25rem;
+}
+@media (max-width: 1000px) {
+  .photo-grid {
+    columns: 3;
+  }
+}
+@media (max-width: 600px) {
+  .split,
+  .intro,
+  .album-card {
+    grid-template-columns: 1fr;
+  }
+  .split > img,
+  .album-card > img {
+    min-height: 0;
+    height: 16rem;
+  }
+  .album-card:nth-child(even) > img {
+    order: 0;
+  }
+  .panel {
+    padding: 2.5rem 1.25rem;
+  }
+  .album-card > div {
+    padding: 2.5rem 1rem;
+  }
+  .photo-grid {
+    columns: 2;
+    column-gap: 0.35rem;
+    padding: 0.35rem;
+  }
+  .site-header nav {
+    font-size: 1rem;
+  }
+  .lightbox {
+    padding: 0.75rem;
+  }
+  .lightbox-toolbar {
+    gap: 0.5rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a img {
+    transition: filter 0.2s;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}

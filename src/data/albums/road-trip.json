@@ -1,0 +1,74 @@
+{
+  "slug": "road-trip",
+  "title": "Cross-Country Road Trip",
+  "date": "Summer 2023",
+  "sortDate": "2023-06-01",
+  "description": "These photos are all from the road trip I took from North Carolina to Southern California after my uncle gave me his old camera. I didn't know much about cameras then (and honestly still don't) but while driving through some of the most random locations there was plenty of beautiful scenery.",
+  "coverImage": "compressed/01.webp",
+  "photos": [
+    {
+      "filename": "01.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 01",
+      "thumbnail": "compressed/01.webp"
+    },
+    {
+      "filename": "02.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 02",
+      "thumbnail": "compressed/02.webp"
+    },
+    {
+      "filename": "03.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 03",
+      "thumbnail": "compressed/03.webp"
+    },
+    {
+      "filename": "04.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 04",
+      "thumbnail": "compressed/04.webp"
+    },
+    {
+      "filename": "05.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 05",
+      "thumbnail": "compressed/05.webp"
+    },
+    {
+      "filename": "06.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 06",
+      "thumbnail": "compressed/06.webp"
+    },
+    {
+      "filename": "07.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 07",
+      "thumbnail": "compressed/07.webp"
+    },
+    {
+      "filename": "08.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 08",
+      "thumbnail": "compressed/08.webp"
+    },
+    {
+      "filename": "09.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 09",
+      "thumbnail": "compressed/09.webp"
+    },
+    {
+      "filename": "10.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 10",
+      "thumbnail": "compressed/10.webp"
+    },
+    {
+      "filename": "11.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 11",
+      "thumbnail": "compressed/11.webp"
+    },
+    {
+      "filename": "12.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 12",
+      "thumbnail": "compressed/12.webp"
+    },
+    {
+      "filename": "13.png",
+      "alt": "Cross-Country Road Trip \u2014 photo 13"
+    }
+  ]
+}

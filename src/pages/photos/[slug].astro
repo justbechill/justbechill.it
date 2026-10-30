@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Gallery from '../../components/Gallery.astro';
+import { albums, type Album } from '../../data/albums';
+export function getStaticPaths() {
+  return albums.map(album => ({ params: { slug: album.slug }, props: { album } }));
+}
+interface Props { album: Album; }
+const { album } = Astro.props;
+---
+<Layout title={`${album.title} — ${album.date}`} description={album.description}>
+  <header class="album-heading">
+    <a class="back-link" href="/photos/">← All albums</a>
+    <h1>{album.title}</h1>
+    <p class="album-date">{album.date}</p>
+    <p>{album.description}</p>
+  </header>
+  <Gallery album={album} />
+</Layout>
