@@ -223,6 +223,80 @@ img {
 .album-list {
   display: grid;
 }
+.projects-heading {
+  display: grid;
+  justify-items: center;
+  gap: 0.8rem;
+  padding: 3.5rem 1.25rem 3rem;
+  text-align: center;
+}
+.eyebrow {
+  color: var(--sand);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+.project-list {
+  display: grid;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+.project-card {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  background: #222;
+  border: 1px solid #ffffff18;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.project-card figure {
+  position: relative;
+  min-height: 20rem;
+}
+.project-card img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.project-card figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5rem 1rem 0.75rem;
+  background: linear-gradient(transparent, #000c);
+  font-size: 0.75rem;
+  color: #fff;
+}
+.project-details {
+  display: grid;
+  align-content: center;
+  gap: 0.75rem;
+  padding: 2rem 2.5rem;
+}
+.project-details h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
+.project-number {
+  margin-right: 0.8rem;
+  color: var(--muted);
+}
+.project-contribution {
+  color: var(--muted);
+  font-size: 1rem;
+}
+.project-contribution strong {
+  display: block;
+  color: var(--text);
+}
+@media (max-width: 700px) {
+  .project-card { grid-template-columns: 1fr; }
+  .project-card figure { min-height: 15rem; }
+  .project-details { padding: 1.5rem; }
+  .project-list { padding-inline: 1rem; }
+}
 .latest {
   border-top: 1px solid #ffffff20;
 }
