@@ -1,27 +1,38 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
-interface Props { title: string; description?: string; }
-const { title, description = 'Photography, trips, and a little about Kyle Malling.' } = Astro.props;
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+interface Props {
+    title: string;
+    description?: string;
+}
+const { title, description = "" } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} />
-    <meta name="theme-color" content="#5380AA" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://justbechill.it/photos/icon.svg" />
-    <title>{title === 'Kyle Malling' ? title : `${title} | Kyle Malling`}</title>
-    <link rel="icon" href="/photos/icon.svg" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <Navigation />
-    <main id="main"><slot /></main>
-    <Footer />
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={description} />
+        <meta name="theme-color" content="#5380AA" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta
+            property="og:image"
+            content="https://justbechill.it/photos/icon.svg"
+        />
+        <title>{title === 'Kyle Malling' ? title : `${title} | Kyle Malling`}</title>
+        <link rel="icon" href="/photos/icon.svg" />
+    </head>
+    <body>
+        <a class="skip-link" href="#main">
+            Skip to content
+        </a>
+        <Navigation />
+        <main id="main">
+            <slot />
+        </main>
+        <Footer />
+    </body>
 </html>
