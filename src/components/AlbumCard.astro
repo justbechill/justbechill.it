@@ -6,5 +6,5 @@ const cover = coverImage(album);
 ---
 <a class="album-card" href={`/photos/${album.slug}/`}>
   <img src={cover.thumbnailUrl} alt="" loading="lazy" decoding="async" width={cover.width} height={cover.height} />
-  <div><p class="eyebrow">PHOTO ALBUM</p><h2>{album.title}</h2><p>{album.date}</p><span>{album.photos.length} photos <span aria-hidden="true">↗</span></span></div>
+  <div><h2>{album.title}</h2><p>{album.date}</p><span>{album.photos.length} photos <span aria-hidden="true">↗</span></span></div>
 </a>
