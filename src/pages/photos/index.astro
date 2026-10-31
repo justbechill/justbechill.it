@@ -1,12 +1,15 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Hero from '../../components/Hero.astro';
-import AlbumCard from '../../components/AlbumCard.astro';
-import { albums } from '../../data/albums';
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import AlbumCard from "../../components/AlbumCard.astro";
+import { albums } from "../../data/albums";
 ---
+
 <Layout title="Photos">
-  <Hero title="Photos" image="/photos/los-angeles/compressed/20.webp" position="50% 70%" />
-  <section class="album-list" aria-label="Photo albums">
-    {albums.map(album => <AlbumCard album={album} />)}
-  </section>
+    <Hero title="Photos" image="/photos/taiwan-hk/13.jpg" position="50% 70%" />
+    <section class="album-list" aria-label="Photo albums">
+        {albums.map((album) => (
+            <AlbumCard album={album} />
+        ))}
+    </section>
 </Layout>

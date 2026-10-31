@@ -6,5 +6,20 @@ const links = [{ href: '/projects/', label: 'Projects' }, { href: '/photos/', la
   <nav aria-label="Main navigation">
     <a class="brand" href="/"><img src="/photos/icon.svg" width="32" height="32" alt="" />Kyle Malling</a>
     {links.map(link => <a href={link.href} aria-current={path.startsWith(link.href) ? 'page' : undefined}>{link.label}</a>)}
+    <button class="theme-toggle" type="button" aria-label="Light mode" aria-pressed="false">Light mode</button>
   </nav>
 </header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.theme-toggle');
+  function updateToggle() {
+    toggle?.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'light'));
+  }
+  updateToggle();
+  toggle?.addEventListener('click', () => {
+    const theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+    document.documentElement.dataset.theme = theme;
+    try { localStorage.setItem('theme', theme); } catch {}
+    updateToggle();
+  });
+</script>

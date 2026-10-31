@@ -10,9 +10,18 @@ const { title, description = "" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
     <head>
         <meta charset="UTF-8" />
+        <script is:inline>
+            try {
+                const saved = localStorage.getItem('theme');
+                document.documentElement.dataset.theme = saved === 'light' || saved === 'dark'
+                    ? saved : 'light';
+            } catch {
+                document.documentElement.dataset.theme = 'light';
+            }
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={description} />
         <meta name="theme-color" content="#5380AA" />
