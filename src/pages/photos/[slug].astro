@@ -11,7 +11,6 @@ const { album } = Astro.props;
 <Layout title={`${album.title} — ${album.date}`} description={album.description}>
   <header class="album-heading">
     <a class="back-link" href="/photos/">← All albums</a>
-    <p class="eyebrow">PHOTO JOURNAL</p>
     <h1>{album.title}</h1>
     <p class="album-date">{album.date}</p>
     <p>{album.description}</p>

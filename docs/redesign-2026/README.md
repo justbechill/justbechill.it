@@ -33,3 +33,11 @@ Updated viewport screenshots at exactly 1920 × 1080 pixels after halving all co
 
 - [Photos page](photos-1920x1080.png)
 - [Taiwan & Hong Kong gallery](taiwan-hk-1920x1080.png)
+
+## Light mode (current default)
+
+Light mode is the default, including when the device prefers dark mode. The navigation toggle saves an explicit choice across page loads. The homepage subtitle and album “PHOTO JOURNAL” label have been removed.
+
+Current screenshots: [Photos](light-mode/photos-1920x1080.png), [Taiwan & Hong Kong](light-mode/taiwan-hk-1920x1080.png), [Homepage](light-mode/home-1920x1080.png), [Projects](light-mode/projects-1920x1080.png), and [mobile gallery](light-mode/taiwan-hk-mobile.png).
+
+Production build and browser checks passed: default light theme with a dark device preference, theme switching, saved preference after reload, mobile layout without horizontal overflow, and gallery viewer opening/closing.

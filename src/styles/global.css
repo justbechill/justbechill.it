@@ -509,3 +509,42 @@ figcaption {
   .album-list, .gallery { padding-inline: 1rem; gap: 1.5rem; }
   .prose { margin: 1rem 1rem 3rem; }
 }
+
+/* Local light-mode preview. Photographic headers and the viewer stay dark. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f1ec;
+  --text: #302c29;
+  --muted: #6a6058;
+  --surface: #fffcf8;
+  --border: #493a2926;
+}
+[data-theme="light"] .site-header {
+  background: #f4f1eceb;
+  border-bottom-color: var(--border);
+  box-shadow: 0 4px 20px #493a2908;
+}
+[data-theme="light"] .eyebrow,
+[data-theme="light"] .album-heading .back-link,
+[data-theme="light"] .site-header a:hover,
+[data-theme="light"] .site-header a[aria-current] { color: #79604b; }
+.hero { color: #f2f2f2; }
+[data-theme="light"] .hero .eyebrow { color: #e7d5c3; }
+.site-footer { color: #1b1b1b; }
+.lightbox { color: #f2f2f2; }
+.theme-toggle {
+  margin-left: auto;
+  padding: 0.35rem 0.8rem;
+  min-height: 44px;
+  font-size: 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.theme-toggle:hover { border-color: var(--sand); }
+.theme-toggle[aria-pressed="true"] { background: #e8ddd0; }
+@media (max-width: 420px) {
+  .site-header nav { padding-inline: 0.75rem; gap: 0.2rem; }
+  .site-header a { padding-inline: 0.35rem; }
+  .theme-toggle { padding-inline: 0.5rem; }
+}
