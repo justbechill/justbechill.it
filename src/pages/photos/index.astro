@@ -6,7 +6,11 @@ import { albums } from "../../data/albums";
 ---
 
 <Layout title="Photos">
-    <Hero title="Photos" image="/photos/taiwan-hk/13.jpg" position="50% 70%" />
+    <Hero
+        title="Photos"
+        image="/_thumbnails/taiwan-hk/13.jpg.webp"
+        position="50% 70%"
+    />
     <section class="album-list" aria-label="Photo albums">
         {albums.map((album) => (
             <AlbumCard album={album} />
