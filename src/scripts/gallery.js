@@ -50,7 +50,7 @@ for (const gallery of document.querySelectorAll("[data-gallery]")) {
     }
   });
   dialog.addEventListener("click", (event) => {
-    if (event.target === dialog) dialog.close();
+    if (!event.target.closest("img, button, a")) dialog.close();
   });
   dialog.addEventListener("close", () => {
     document.body.style.overflow = previousOverflow;

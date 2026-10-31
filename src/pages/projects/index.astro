@@ -31,12 +31,15 @@ const projects = [
     description="A selection of Kyle Malling’s public GitHub projects, from Wayland widgets to hardware and developer tools."
 >
     <header class="projects-heading">
-        <p class="eyebrow">THINGS I'VE BEEN BUILDING</p>
+        <p class="eyebrow">THINGS I'VE BUILT (OR AM BUILDING)</p>
         <h1>Projects</h1>
-        <p>
-            A few experiments in software, hardware, and making things my own.
-        </p>
-        <a class="text-link" href="https://github.com/justbechill">
+
+        <a
+            class="text-link"
+            href="https://github.com/justbechill"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             More on GitHub <span aria-hidden="true">↗</span>
         </a>
     </header>
@@ -70,9 +73,10 @@ const projects = [
                     <a
                         class="text-link"
                         href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
-                        View {project.name}{" "}
-                        <span aria-hidden="true">↗</span>
+                        View {project.name} <span aria-hidden="true">↗</span>
                     </a>
                 </div>
             </section>
