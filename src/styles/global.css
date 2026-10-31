@@ -520,7 +520,7 @@ figcaption {
   --border: #493a2926;
 }
 [data-theme="light"] .site-header {
-  background: #f4f1eceb;
+  background: #f4f1eccc;
   border-bottom-color: var(--border);
   box-shadow: 0 4px 20px #493a2908;
 }
