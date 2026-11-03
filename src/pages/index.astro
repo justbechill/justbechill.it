@@ -11,8 +11,8 @@ import { albums } from "../data/albums";
         <img
             src="/_thumbnails/taiwan-hk/14.jpg.webp"
             alt="Kyle Malling"
-            width="800"
-            height="800"
+            width="900"
+            height="1350"
         />
         <div class="panel">
             <h2>About Me</h2>
@@ -68,4 +68,94 @@ import { albums } from "../data/albums";
     <section aria-label="Latest photo album" class="album-list latest">
         <AlbumCard album={albums[0]} />
     </section>
+    <section class="contact" aria-labelledby="contact-heading">
+        <div class="contact-intro">
+            <h2 id="contact-heading">Get in Touch</h2>
+            <p>Send me an email or find me online.</p>
+        </div>
+        <ul class="contact-links">
+            <li>
+                <a href="mailto:kmalling16@gmail.com">
+                    <span class="contact-label">Email</span>
+                    <span>kmalling16@gmail.com</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/justbechill" target="_blank" rel="noopener noreferrer">
+                    <span class="contact-label">GitHub</span>
+                    <span>justbechill ↗</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://linkedin.com/in/kyle-malling" target="_blank" rel="noopener noreferrer">
+                    <span class="contact-label">LinkedIn</span>
+                    <span>Kyle Malling ↗</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/pls.be.chill/" target="_blank" rel="noopener noreferrer">
+                    <span class="contact-label">Instagram</span>
+                    <span>@pls.be.chill ↗</span>
+                </a>
+            </li>
+        </ul>
+    </section>
 </Layout>
+
+<style>
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        max-width: calc(var(--page-width) - 3rem);
+        margin: 0 auto 4rem;
+        padding: clamp(1.5rem, 4vw, 3rem);
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+    }
+    .contact-intro p {
+        margin-top: 1rem;
+        color: var(--muted);
+    }
+    .contact-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        min-width: 0;
+    }
+    .contact-links a {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 44px;
+        overflow-wrap: anywhere;
+        text-decoration: none;
+    }
+    .contact-label {
+        font-weight: 700;
+    }
+    .contact-links a span:last-child {
+        font-size: 1rem;
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+    }
+    .contact-links a:hover span:last-child {
+        text-decoration-thickness: 2px;
+    }
+    @media (max-width: 700px) {
+        .contact {
+            grid-template-columns: 1fr;
+            margin-inline: 1rem;
+        }
+    }
+    @media (max-width: 420px) {
+        .contact-links {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+</style>

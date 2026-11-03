@@ -474,6 +474,10 @@ figcaption {
     min-height: 0;
     height: 16rem;
   }
+  .intro > img {
+    height: auto;
+    max-height: none;
+  }
   .album-card:nth-child(even) > img {
     order: 0;
   }
