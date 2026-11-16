@@ -4,7 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 const projects = [
     { id: "linux", title: "Arch Linux Home Server", context: "Personal project", tags: ["Arch Linux", "SSH", "Networking"], description: "I built and administer the Arch Linux server that hosts this website, Discord chatbots, and my software projects.", contribution: "Configured SSH access, automated storage backups, and custom scripts to keep the services running.", image: "/photos/san-diego-winter/25.jpg", alt: "A San Diego photograph used as a placeholder for the server project", placeholder: true },
     { id: "clockem", title: "Clockem", context: "Personal project", tags: ["Rust", "Wayland", "Linux"], description: "Clock, weather, and wallpaper widgets for Wayland, built to learn Rust.", contribution: "", image: "/photos/clockem.png", alt: "Clockem clock and weather widgets on a Wayland desktop", url: "https://github.com/justbechill/clockem", link: "View Clockem on GitHub" },
-    { id: "frc", title: "Mantis", context: "Poly Rabbotics · Team 7042 · FRC Crescendo", tags: ["Java", "WPILib", "Robotics"], description: "As a main programmer for our 2024 competition robot, I wrote most of the code for its non-drive mechanisms and contributed to other robot systems.", contribution: "My FRC work included autonomous routines, sensor integration, and motor-controller logic. Our team competed at the World Championships; I was named team MVP in 2024.", image: "/photos/mantis.webp", alt: "Mantis, Poly Rabbotics’ 2024 FRC competition robot", url: "https://github.com/poly-rabbotics/2024-Crescendo", link: "Explore the robot code" },
+    { id: "frc", title: "Mantis · FRC Crescendo", context: "Poly Rabbotics · Team 7042", tags: ["Java", "WPILib", "Robotics"], description: "As a main programmer for our 2024 competition robot, I wrote most of the code for its non-drive mechanisms and contributed to other robot systems.", contribution: "I led the team as captain in 2024 and 2025, co-leading about 30 members and mentoring students in programming and robot system design. My FRC work included autonomous routines, sensor integration, and motor-controller logic. Our team competed at the World Championships; I was named team MVP in 2024.", image: "/photos/mantis.webp", alt: "Mantis, Poly Rabbotics’ 2024 FRC competition robot", url: "https://github.com/poly-rabbotics/2024-Crescendo", link: "Explore the robot code" },
 ];
 const experience = [
     { role: "Lab Fellow", company: "UCSD HDSI Lab 3.0", date: "Sep 2026 – Present", details: "Build hands-on engineering projects for STEM education. Designed a mechanical flower in Onshape that is now integrated into a robotic arm for educational workshops." },
@@ -85,8 +85,7 @@ const skills = [
     .work-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
     .work-card { display: grid; grid-template-columns: 40% 1fr; min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
     .work-card figure { position: relative; min-height: 20rem; overflow: hidden; background: #171717; }
-    .work-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
-    .placeholder img { object-fit: cover; }
+    .work-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
     .placeholder figcaption { position: absolute; bottom: 0; width: 100%; background: #0009; color: #fff; font-size: .8rem; }
     .work-body { padding: 2rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; font-size: 1rem; }
     h3 { margin: 0; font-size: 1.55rem; line-height: 1.25; letter-spacing: -.015em; }
