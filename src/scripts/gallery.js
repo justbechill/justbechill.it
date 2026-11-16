@@ -1,6 +1,24 @@
 // Native dialog provides modal semantics, Escape handling, and focus containment.
 for (const gallery of document.querySelectorAll("[data-gallery]")) {
   const links = [...gallery.querySelectorAll("[data-photo]")];
+  const grid = gallery.querySelector(".photo-grid");
+  if (grid) {
+    const figures = [...grid.querySelectorAll("figure")];
+    function centerColumns() {
+      if (!figures.length) return;
+      // Multicolumn balancing can leave trailing columns empty.
+      grid.style.setProperty("--gallery-offset", "0px");
+      const bounds = grid.getBoundingClientRect();
+      const occupied = figures.map(figure => figure.getBoundingClientRect());
+      const left = Math.min(...occupied.map(rect => rect.left));
+      const right = Math.max(...occupied.map(rect => rect.right));
+      const offset = (bounds.left + bounds.right - left - right) / 2;
+      grid.style.setProperty("--gallery-offset", `${offset}px`);
+    }
+    new ResizeObserver(centerColumns).observe(grid);
+    grid.addEventListener("load", centerColumns, true);
+    centerColumns();
+  }
   const dialog = gallery.querySelector("dialog");
   if (!dialog || typeof dialog.showModal !== "function") continue;
   const image = dialog.querySelector("[data-expanded]");

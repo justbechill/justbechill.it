@@ -1,0 +1,46 @@
+{
+  "slug": "san-diego-2026-2027",
+  "title": "San Diego 2026-2027",
+  "date": "Summer 2026 - Spring 2027",
+  "sortDate": "2026-09-05",
+  "description": "Photos from San Diego in 2026–2027.",
+  "draft": false,
+  "coverImage": "compressed/07.webp",
+  "photos": [
+    {
+      "filename": "01.jpg",
+      "thumbnail": "compressed/01.webp",
+      "alt": "San Diego 2026–2027 — photo 01"
+    },
+    {
+      "filename": "02.jpg",
+      "thumbnail": "compressed/02.webp",
+      "alt": "San Diego 2026–2027 — photo 02"
+    },
+    {
+      "filename": "03.jpg",
+      "thumbnail": "compressed/03.webp",
+      "alt": "San Diego 2026–2027 — photo 03"
+    },
+    {
+      "filename": "04.jpg",
+      "thumbnail": "compressed/04.webp",
+      "alt": "San Diego 2026–2027 — photo 04"
+    },
+    {
+      "filename": "05.jpg",
+      "thumbnail": "compressed/05.webp",
+      "alt": "San Diego 2026–2027 — photo 05"
+    },
+    {
+      "filename": "06.jpg",
+      "thumbnail": "compressed/06.webp",
+      "alt": "San Diego 2026–2027 — photo 06"
+    },
+    {
+      "filename": "07.jpg",
+      "thumbnail": "compressed/07.webp",
+      "alt": "San Diego 2026–2027 — photo 07"
+    }
+  ]
+}

@@ -4,7 +4,8 @@ import { resolve, sep } from "node:path";
 
 export const albums = readdirSync("src/data/albums")
   .filter((f) => f.endsWith(".json"))
-  .map((f) => JSON.parse(readFileSync(`src/data/albums/${f}`, "utf8")));
+  .map((f) => JSON.parse(readFileSync(`src/data/albums/${f}`, "utf8")))
+  .filter((album) => !album.draft);
 const slugs = new Set();
 let count = 0;
 for (const album of albums) {

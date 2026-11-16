@@ -12,13 +12,14 @@ export interface Album {
   sortDate: string;
   description: string;
   coverImage: string;
+  draft?: boolean;
   photos: Photo[];
 }
 const files = import.meta.glob<Album>("./albums/*.json", {
   eager: true,
   import: "default",
 });
-export const albums = Object.values(files).sort((a, b) =>
+export const albums = Object.values(files).filter(album => !album.draft).sort((a, b) =>
   b.sortDate.localeCompare(a.sortDate),
 );
 export const photoPath = (album: Album, filename: string) =>

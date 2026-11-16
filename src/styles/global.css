@@ -286,15 +286,7 @@ img {
   position: absolute;
   object-fit: cover;
 }
-.project-card figcaption {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 1.5rem 1rem 0.75rem;
-  background: linear-gradient(transparent, #000c);
-  font-size: 0.75rem;
-  color: #fff;
-}
+
 .project-details {
   display: grid;
   align-content: center;
@@ -345,6 +337,7 @@ img {
   padding: 0;
 }
 .photo-grid figure {
+  transform: translateX(var(--gallery-offset, 0px));
   min-width: 0;
   break-inside: avoid;
   margin-bottom: 0.5rem;
