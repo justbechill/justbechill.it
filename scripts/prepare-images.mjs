@@ -39,6 +39,21 @@ for (const album of albums) {
     height: cover.height,
   };
 }
+// Project cards use smaller WebP derivatives, including the existing WebP photo.
+await mkdir("site/_thumbnails/projects", { recursive: true });
+for (const filename of ["flower.png", "server.png", "clockem.png", "mantis.webp"]) {
+  const input = `site/photos/${filename}`;
+  const output = `site/_thumbnails/projects/${filename.replace(/\.[^.]+$/, ".webp")}`;
+  const source = await stat(input);
+  const cached = await stat(output).catch(() => null);
+  if (!cached || cached.mtimeMs < source.mtimeMs) {
+    await sharp(input)
+      .rotate()
+      .resize({ width: 900, withoutEnlargement: true })
+      .webp({ quality: 85 })
+      .toFile(output);
+  }
+}
 await mkdir(".astro", { recursive: true });
 await writeFile(".astro/photo-metadata.json", JSON.stringify(metadata));
-console.log("Prepared responsive gallery thumbnails and intrinsic dimensions.");
+console.log("Prepared gallery and project thumbnails and intrinsic dimensions.");
