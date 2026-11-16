@@ -2,108 +2,511 @@
 import Layout from "../../layouts/Layout.astro";
 
 const projects = [
-    { id: "flower", title: "Robotic Flower", context: "UCSD HDSI Lab 3.0", tags: ["CAD", "3D Printing", "ML"], description: "I designed and implemented a flower mechanism for HDSI Lab 3.0’s Robotic Flower project.", contribution: "Designed the mechanism in Onshape and integrated the completed flower into a robotic arm for educational workshops.", image: "/photos/san-diego-winter/25.jpg", alt: "A San Diego photograph used as a placeholder for the Robotic Flower project" },
-    { id: "linux", title: "Arch Linux Home Server", context: "Personal project", tags: ["Arch Linux", "SSH", "Networking"], description: "I built and administer the Arch Linux server that hosts this website, Discord chatbots, and my software projects.", contribution: "Configured SSH access, automated storage backups, and custom scripts to keep the services running.", image: "/photos/san-diego-winter/25.jpg", alt: "A San Diego photograph used as a placeholder for the server project" },
-    { id: "clockem", title: "Clockem", context: "Personal project", tags: ["Rust", "Wayland", "Linux"], description: "Clock, weather, and wallpaper widgets for Wayland, built to learn Rust.", contribution: "", image: "/photos/clockem.png", alt: "Clockem clock and weather widgets on a Wayland desktop", url: "https://github.com/justbechill/clockem", link: "View Clockem on GitHub" },
-    { id: "frc", title: "Mantis · FRC Crescendo", context: "Poly Rabbotics · Team 7042", tags: ["Java", "WPILib", "Robotics"], description: "My FRC work included autonomous routines, sensor integration, state machines, and motor-controller logic. In 2025, our team competed at the World Championships and I was named team MVP.", contribution: "I led the team as a member of core leadership in 2024 and 2025, directing about 30 members and mentoring students in programming and robot system design.", image: "/photos/mantis.webp", alt: "Mantis, Poly Rabbotics’ 2024 FRC competition robot", url: "https://github.com/poly-rabbotics/2024-Crescendo", link: "Explore the robot code" },
+    {
+        id: "flower",
+        title: "Robotic Flower",
+        context: "UCSD HDSI Lab 3.0",
+        tags: ["CAD", "3D Printing", "ML"],
+        description:
+            "I designed and implemented a flower mechanism for HDSI Lab 3.0’s Robotic Flower project.",
+        contribution:
+            "Designed the mechanism in Onshape and integrated the completed flower into a robotic arm for educational workshops.",
+        image: "/photos/flower.png",
+        alt: "CAD rendering of the robotic flower mechanism with its pink petals open",
+        url: "https://lab3.ucsd.edu",
+        link: "About Lab 3.0",
+    },
+    {
+        id: "linux",
+        title: "Arch Linux Home Server",
+        context: "Personal project",
+        tags: ["Arch Linux", "SSH", "Networking"],
+        description:
+            "I built and administer the Arch Linux server that hosts this website, Discord chatbots, and my software projects.",
+        contribution:
+            "Configured SSH access, automated storage backups, and custom scripts to keep the services running.",
+        image: "/photos/server.png",
+        alt: "htop showing resource usage and running processes on my Arch Linux home server",
+    },
+    {
+        id: "clockem",
+        title: "Clockem",
+        context: "Personal project",
+        tags: ["Rust", "Wayland", "Linux"],
+        description:
+            "Clock, weather, and wallpaper widgets for Wayland, built to learn Rust.",
+        contribution: "",
+        image: "/photos/clockem.png",
+        alt: "Clockem clock and weather widgets on a Wayland desktop",
+        url: "https://github.com/justbechill/clockem",
+        link: "View Clockem on GitHub",
+    },
+    {
+        id: "frc",
+        title: "Poly Rabbotics · FRC Team 7042",
+        context: "FIRST Robotics Competition",
+        tags: ["Java", "WPILib", "Robotics"],
+        description:
+            "My FRC work included autonomous routines, sensor integration, state machines, and motor-controller logic. In 2023, our team competed at the World Championships; I was named team MVP in 2024.",
+        contribution:
+            "I led the team as a member of core leadership in 2024 and 2025, directing about 30 members and mentoring students in programming and robot system design.",
+        image: "/photos/mantis.webp",
+        alt: "Mantis, Poly Rabbotics’ 2024 FRC competition robot",
+        url: "https://github.com/poly-rabbotics/2024-Crescendo",
+        link: "Explore the robot code",
+    },
 ];
 const experience = [
-    { role: "Lab Fellow", company: "UCSD HDSI Lab 3.0", date: "Sep 2026 – Present", details: "Build hands-on engineering projects for STEM education. Designed a mechanical flower in Onshape that is now integrated into a robotic arm for educational workshops." },
-    { role: "Applications Developer", company: "ACME Digital Content", date: "Jun 2025 – Sep 2026", details: "Built a Go GUI and MySQL/MariaDB ORM backend to manage client data. Integrated operating-system keyrings to store login secrets across Windows, macOS, and Linux." },
-    { role: "Embedded Team Member", company: "UCSD Triton Robotics", date: "Jan 2026 – Jun 2026", details: "Developed a physics-based drivetrain acceleration limit to reduce wheel slip, and implemented bare-metal PID control and serial communication for embedded robot systems." },
-    { role: "Team Captain / Programming Lead", company: "Poly Rabbotics · FRC Team 7042", date: "Member · Sep 2021 – Jun 2025", details: "Programming lead from Jun 2022 to Jun 2023 and team captain from Jun 2023 to Jun 2025. Led about 30 students and mentored teammates in object-oriented programming and robot system design." },
+    {
+        role: "Lab Fellow",
+        company: "UCSD HDSI Lab 3.0",
+        date: "Sep 2026 – Present",
+        details:
+            "Building hands-on embedded/ML engineering projects for STEM education. Experience building and designing ESP32, Arduino, and Raspberry Pi-based systems for robotics/ML applications.",
+    },
+    {
+        role: "Applications Developer",
+        company: "ACME Digital Content",
+        date: "Jun 2025 – Sep 2026",
+        details:
+            "Built a Go GUI and MySQL/MariaDB ORM backend to manage client data. Integrated operating-system keyrings to store login secrets across Windows, macOS, and Linux.",
+    },
+    {
+        role: "Embedded Team Member",
+        company: "UCSD Triton Robotics",
+        date: "Jan 2026 – Jun 2026",
+        details:
+            "Developed a physics-based drivetrain acceleration limit to reduce wheel slip, and implemented bare-metal PID control and serial communication for embedded robot systems.",
+    },
+    {
+        role: "Team Captain / Programming Lead",
+        company: "Poly Rabbotics · FRC Team 7042",
+        date: "Member · Sep 2021 – Jun 2025",
+        details:
+            "Programming lead from Jun 2022 to Jun 2023 and core leadership from Jun 2023 to Jun 2025. Led about 30 students and mentored teammates in object-oriented programming and robot system design.",
+    },
 ];
 const skills = [
-    { title: "Languages", items: "C, C++, ARM assembly, Rust, Java, Go, JavaScript" },
-    { title: "Embedded systems", items: "ESP32, Arduino, Raspberry Pi · I2C, SPI, UART, CAN" },
-    { title: "Hardware & fabrication", items: "Soldering, circuit prototyping, Onshape / CAD, 3D printing" },
-    { title: "Tools & debugging", items: "Linux, Git / GitHub, WPILib, GDB, multimeters" },
+    {
+        title: "Languages",
+        items: "C, C++, ARM assembly, Rust, Java, Go, JavaScript",
+    },
+    {
+        title: "Embedded systems",
+        items: "ESP32, Arduino, Raspberry Pi · I2C, SPI, UART, CAN",
+    },
+    {
+        title: "Hardware & fabrication",
+        items: "Soldering, circuit prototyping, Onshape / CAD, 3D printing",
+    },
+    {
+        title: "Tools & debugging",
+        items: "Linux, Git / GitHub, WPILib, GDB, multimeters",
+    },
 ];
 ---
 
-<Layout title="Portfolio" description="Kyle Malling’s engineering portfolio: embedded systems, robotics, software, and hands-on design. UC San Diego Computer Engineering, class of 2029.">
+<Layout
+    title="Portfolio"
+    description="Kyle Malling’s engineering portfolio: embedded systems, robotics, software, and hands-on design. UC San Diego Computer Engineering, class of 2029."
+>
     <div class="portfolio">
         <header class="portfolio-hero">
             <div>
                 <h1>Portfolio</h1>
-                <p class="lead">Kyle Malling · Computer Engineering, UC San Diego</p>
+                <p class="lead">
+                    Kyle Malling · Computer Engineering, UC San Diego
+                </p>
                 <div class="actions">
-                    <a class="primary-link" href="mailto:kmalling16@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
-                    <a class="text-link" href="/kyle-malling-resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF) <span aria-hidden="true">↗</span></a>
-                    <a class="text-link" href="https://github.com/justbechill" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    <a class="primary-link" href="mailto:kmalling16@gmail.com">
+                        Get in touch <span aria-hidden="true">↗</span>
+                    </a>
+                    <a
+                        class="text-link"
+                        href="/kyle-malling-resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Resume (PDF) <span aria-hidden="true">↗</span>
+                    </a>
+                    <a
+                        class="text-link"
+                        href="https://github.com/justbechill"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub <span aria-hidden="true">↗</span>
+                    </a>
                 </div>
             </div>
             <aside class="education" aria-label="Education">
                 <h2>UC San Diego</h2>
                 <p>Computer Engineering</p>
-                <dl><div><dt>Graduating</dt><dd>June 2029</dd></div><div><dt>GPA</dt><dd>3.88</dd></div><div><dt>Based in</dt><dd>Long Beach / San Diego, CA</dd></div></dl>
+                <dl>
+                    <div>
+                        <dt>Graduating</dt>
+                        <dd>June 2029</dd>
+                    </div>
+                    <div>
+                        <dt>GPA</dt>
+                        <dd>3.88</dd>
+                    </div>
+                    <div>
+                        <dt>Based in</dt>
+                        <dd>Long Beach / San Diego, CA</dd>
+                    </div>
+                </dl>
             </aside>
         </header>
-        <nav class="section-nav" aria-label="Portfolio sections"><a href="#work">Projects <span aria-hidden="true">↘</span></a><a href="#experience">Experience <span aria-hidden="true">↘</span></a><a href="#skills">Skills <span aria-hidden="true">↘</span></a></nav>
+        <nav class="section-nav" aria-label="Portfolio sections">
+            <a href="#work">
+                Projects <span aria-hidden="true">↘</span>
+            </a>
+            <a href="#experience">
+                Experience <span aria-hidden="true">↘</span>
+            </a>
+            <a href="#skills">
+                Skills <span aria-hidden="true">↘</span>
+            </a>
+        </nav>
         <section id="work" aria-labelledby="work-heading">
-            <div class="section-heading"><h2 id="work-heading">Projects</h2></div>
+            <div class="section-heading">
+                <h2 id="work-heading">Projects</h2>
+            </div>
             <div class="work-grid">
-                {projects.map(project => <article class="work-card" aria-labelledby={project.id}>
-                    <figure><img src={project.image} alt={project.alt} loading="lazy" decoding="async" width="900" height="600" /></figure>
-                    <div class="work-body"><p class="context">{project.context}</p><h3 id={project.id}>{project.title}</h3><ul class="tags" aria-label="Technologies">{project.tags.map(tag => <li>{tag}</li>)}</ul><p>{project.description}</p>{project.contribution && <p class="contribution">{project.contribution}</p>}{project.url && <a class="text-link" href={project.url} target="_blank" rel="noopener noreferrer">{project.link} <span aria-hidden="true">↗</span></a>}</div>
-                </article>)}
+                {projects.map((project) => (
+                    <article class="work-card" aria-labelledby={project.id}>
+                        <figure>
+                            <img
+                                src={project.image}
+                                alt={project.alt}
+                                loading="lazy"
+                                decoding="async"
+                                width="900"
+                                height="600"
+                            />
+                        </figure>
+                        <div class="work-body">
+                            <p class="context">{project.context}</p>
+                            <h3 id={project.id}>{project.title}</h3>
+                            <ul class="tags" aria-label="Technologies">
+                                {project.tags.map((tag) => (
+                                    <li>{tag}</li>
+                                ))}
+                            </ul>
+                            <p>{project.description}</p>
+                            {project.contribution && (
+                                <p class="contribution">
+                                    {project.contribution}
+                                </p>
+                            )}
+                            {project.url && (
+                                <a
+                                    class="text-link"
+                                    href={project.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {project.link}{" "}
+                                    <span aria-hidden="true">↗</span>
+                                </a>
+                            )}
+                        </div>
+                    </article>
+                ))}
             </div>
         </section>
         <section id="experience" aria-labelledby="experience-heading">
-            <div class="section-heading"><h2 id="experience-heading">Experience</h2></div>
-            <div class="experience-list">{experience.map(job => <article class="experience-row"><div><p class="context">{job.company}</p><h3>{job.role}</h3><p class="date">{job.date}</p></div><p>{job.details}</p></article>)}</div>
+            <div class="section-heading">
+                <h2 id="experience-heading">Experience</h2>
+            </div>
+            <div class="experience-list">
+                {experience.map((job) => (
+                    <article class="experience-row">
+                        <div>
+                            <p class="context">{job.company}</p>
+                            <h3>{job.role}</h3>
+                            <p class="date">{job.date}</p>
+                        </div>
+                        <p>{job.details}</p>
+                    </article>
+                ))}
+            </div>
         </section>
         <section id="skills" aria-labelledby="skills-heading">
-            <div class="section-heading"><h2 id="skills-heading">Skills</h2></div>
-            <dl class="skills-grid">{skills.map(skill => <div><dt>{skill.title}</dt><dd>{skill.items}</dd></div>)}</dl>
-            <p class="coursework"><strong>Coursework at UC San Diego</strong> C programming, ARM assembly, digital logic, circuits, discrete mathematics, predicate logic, and number systems.</p>
+            <div class="section-heading">
+                <h2 id="skills-heading">Skills</h2>
+            </div>
+            <dl class="skills-grid">
+                {skills.map((skill) => (
+                    <div>
+                        <dt>{skill.title}</dt>
+                        <dd>{skill.items}</dd>
+                    </div>
+                ))}
+            </dl>
+            <p class="coursework">
+                <strong>Coursework at UC San Diego</strong> C programming, ARM
+                assembly, digital logic, circuits, discrete mathematics,
+                predicate logic, and number systems.
+            </p>
         </section>
     </div>
 </Layout>
 
 <style>
-    .portfolio { max-width: var(--page-width); margin: auto; padding: 0 1.5rem 4rem; }
-    .portfolio-hero { display: grid; grid-template-columns: 1.7fr 1fr; gap: clamp(2rem, 6vw, 5rem); padding: clamp(3rem, 7vw, 6rem) 0 3rem; align-items: center; }
-    h1 { margin: 1rem 0 1.5rem; font-size: clamp(2.7rem, 5.6vw, 4.5rem); letter-spacing: -0.045em; }
-    .lead { color: var(--muted); font-size: 1.2rem; max-width: 48ch; }
-    .actions { display: flex; gap: 1rem 1.5rem; flex-wrap: wrap; align-items: center; margin-top: 2rem; font-size: 1rem; }
-    .primary-link { background: var(--text); color: var(--bg); padding: .7rem 1.1rem; border-radius: var(--radius); text-decoration: none; font-weight: 700; }
-    .primary-link:hover { opacity: .8; }
-    .education { padding: 2rem; border: 1px solid var(--border); border-top: 3px solid var(--sand); border-radius: var(--radius); background: var(--surface); }
-    .education h2 { font-size: 1.7rem; margin-top: .7rem; }
-    .education > p { color: var(--muted); }
-    .education dl { margin: 1.5rem 0; font-size: .95rem; }
-    .education dl div { display: flex; justify-content: space-between; gap: 1rem; padding: .5rem 0; border-bottom: 1px solid var(--border); }
-    dd { margin: 0; }
-    .education dd { text-align: right; }
-    .education dt { color: var(--muted); }
-    .section-nav { display: flex; flex-wrap: wrap; gap: .5rem 2rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: .8rem 0; font-size: 1rem; }
-    .section-nav a { text-decoration: none; padding: .3rem 0; }
-    .section-nav a:hover { text-decoration: underline; }
-    section[id] { scroll-margin-top: 7rem; margin-top: 4.5rem; }
-    .section-heading { margin-bottom: 2rem; }
-    .section-heading h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); letter-spacing: -.025em; }
-    .work-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-    .work-card { display: grid; grid-template-columns: 40% 1fr; min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-    .work-card figure { position: relative; min-height: 20rem; overflow: hidden; background: #171717; }
-    .work-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    .work-body { padding: 2rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; font-size: 1rem; }
-    h3 { margin: 0; font-size: 1.55rem; line-height: 1.25; letter-spacing: -.015em; }
-    .context, .date { color: var(--muted); font-size: .9rem; }
-    .tags { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 0; list-style: none; }
-    .tags li { padding: .2rem .6rem; border: 1px solid var(--border); border-radius: .25rem; font-size: .8rem; }
-    .contribution { color: var(--muted); }
-    .work-body .text-link { margin-top: auto; }
-    .experience-row { display: grid; grid-template-columns: 1fr 1.35fr; gap: 3rem; border-top: 1px solid var(--border); padding: 1.8rem 0; }
-    .experience-row h3 { font-size: 1.3rem; margin: .4rem 0; }
-    .experience-row > p { font-size: 1rem; color: var(--muted); }
-    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-    .skills-grid div { padding: 1.7rem 2rem; background: var(--surface); }
-    .skills-grid dt { font-weight: 700; margin-bottom: .5rem; }
-    .skills-grid dd, .coursework { font-size: 1rem; color: var(--muted); }
-    .coursework { max-width: none; margin-top: 1.5rem; }
-    .coursework strong { color: var(--text); display: block; }
-    @media (max-width: 800px) { .portfolio-hero { grid-template-columns: 1fr; gap: 2rem; } .education { max-width: none; } .section-heading { display: block; } }
-    @media (max-width: 600px) { .portfolio { padding-inline: 1rem; } .work-card, .skills-grid, .experience-row { grid-template-columns: 1fr; } .work-card figure { min-height: 0; aspect-ratio: 16 / 9; } .experience-row { gap: 1rem; } .work-body, .education, .skills-grid div { padding: 1.5rem; } section[id] { margin-top: 3rem; } .section-nav { gap: 1.2rem; font-size: .9rem; } }
-
+    .portfolio {
+        max-width: var(--page-width);
+        margin: auto;
+        padding: 0 1.5rem 4rem;
+    }
+    .portfolio-hero {
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        gap: clamp(2rem, 6vw, 5rem);
+        padding: clamp(3rem, 7vw, 6rem) 0 3rem;
+        align-items: center;
+    }
+    h1 {
+        margin: 1rem 0 1.5rem;
+        font-size: clamp(2.7rem, 5.6vw, 4.5rem);
+        letter-spacing: -0.045em;
+    }
+    .lead {
+        color: var(--muted);
+        font-size: 1.2rem;
+        max-width: 48ch;
+    }
+    .actions {
+        display: flex;
+        gap: 1rem 1.5rem;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 2rem;
+        font-size: 1rem;
+    }
+    .primary-link {
+        background: var(--text);
+        color: var(--bg);
+        padding: 0.7rem 1.1rem;
+        border-radius: var(--radius);
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .primary-link:hover {
+        opacity: 0.8;
+    }
+    .education {
+        padding: 2rem;
+        border: 1px solid var(--border);
+        border-top: 3px solid var(--sand);
+        border-radius: var(--radius);
+        background: var(--surface);
+    }
+    .education h2 {
+        font-size: 1.7rem;
+        margin-top: 0.7rem;
+    }
+    .education > p {
+        color: var(--muted);
+    }
+    .education dl {
+        margin: 1.5rem 0;
+        font-size: 0.95rem;
+    }
+    .education dl div {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border);
+    }
+    dd {
+        margin: 0;
+    }
+    .education dd {
+        text-align: right;
+    }
+    .education dt {
+        color: var(--muted);
+    }
+    .section-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 2rem;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 0.8rem 0;
+        font-size: 1rem;
+    }
+    .section-nav a {
+        text-decoration: none;
+        padding: 0.3rem 0;
+    }
+    .section-nav a:hover {
+        text-decoration: underline;
+    }
+    section[id] {
+        scroll-margin-top: 7rem;
+        margin-top: 4.5rem;
+    }
+    .section-heading {
+        margin-bottom: 2rem;
+    }
+    .section-heading h2 {
+        font-size: clamp(1.9rem, 4vw, 2.6rem);
+        letter-spacing: -0.025em;
+    }
+    .work-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .work-card {
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        min-width: 0;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+    .work-card figure {
+        position: relative;
+        min-height: 20rem;
+        overflow: hidden;
+        background: #171717;
+    }
+    .work-card img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .work-body {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        font-size: 1rem;
+    }
+    h3 {
+        margin: 0;
+        font-size: 1.55rem;
+        line-height: 1.25;
+        letter-spacing: -0.015em;
+    }
+    .context,
+    .date {
+        color: var(--muted);
+        font-size: 0.9rem;
+    }
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .tags li {
+        padding: 0.2rem 0.6rem;
+        border: 1px solid var(--border);
+        border-radius: 0.25rem;
+        font-size: 0.8rem;
+    }
+    .contribution {
+        color: var(--muted);
+    }
+    .work-body .text-link {
+        margin-top: auto;
+    }
+    .experience-row {
+        display: grid;
+        grid-template-columns: 1fr 1.35fr;
+        gap: 3rem;
+        border-top: 1px solid var(--border);
+        padding: 1.8rem 0;
+    }
+    .experience-row h3 {
+        font-size: 1.3rem;
+        margin: 0.4rem 0;
+    }
+    .experience-row > p {
+        font-size: 1rem;
+        color: var(--muted);
+    }
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+    .skills-grid div {
+        padding: 1.7rem 2rem;
+        background: var(--surface);
+    }
+    .skills-grid dt {
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+    .skills-grid dd,
+    .coursework {
+        font-size: 1rem;
+        color: var(--muted);
+    }
+    .coursework {
+        max-width: none;
+        margin-top: 1.5rem;
+    }
+    .coursework strong {
+        color: var(--text);
+        display: block;
+    }
+    @media (max-width: 800px) {
+        .portfolio-hero {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .education {
+            max-width: none;
+        }
+        .section-heading {
+            display: block;
+        }
+    }
+    @media (max-width: 600px) {
+        .portfolio {
+            padding-inline: 1rem;
+        }
+        .work-card,
+        .skills-grid,
+        .experience-row {
+            grid-template-columns: 1fr;
+        }
+        .work-card figure {
+            min-height: 0;
+            aspect-ratio: 16 / 9;
+        }
+        .experience-row {
+            gap: 1rem;
+        }
+        .work-body,
+        .education,
+        .skills-grid div {
+            padding: 1.5rem;
+        }
+        section[id] {
+            margin-top: 3rem;
+        }
+        .section-nav {
+            gap: 1.2rem;
+            font-size: 0.9rem;
+        }
+    }
 </style>
