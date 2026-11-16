@@ -27,6 +27,13 @@ for (const page of pages) {
     !/\/music\/|footer\.js|\/script\.js/.test(html),
     `Legacy code in ${page}`,
   );
+  // Astro's static redirect is a minimal document without the shared footer.
+  if (page === join("dist", "projects", "index.html")) {
+    assert(/http-equiv="refresh"/i.test(html), "Missing legacy Projects redirect");
+    assert(html.includes("/portfolio/"), "Projects must redirect to Portfolio");
+    assert(existsSync("dist/portfolio/index.html"), "Missing Portfolio page");
+    continue;
+  }
   assert(
     html.includes("https://creativecommons.org/licenses/by-nc-sa/4.0/"),
     `Missing licensing on ${page}`,
