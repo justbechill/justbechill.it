@@ -113,9 +113,13 @@ const skills = [
     <div class="portfolio">
         <header class="portfolio-hero">
             <div>
-                <h1>Portfolio</h1>
+                <h1>Kyle Malling</h1>
                 <p class="lead">
-                    Kyle Malling · Computer Engineering, UC San Diego
+                    I’m a CE student focused
+                    on embedded software and robotics. At UCSD's HDSI Lab 3.0, I build
+                    embedded systems for robotics and machine learning
+                    education, drawing on experience in robot control, hardware
+                    integration, and application development.
                 </p>
                 <div class="actions">
                     <a class="primary-link" href="mailto:kmalling16@gmail.com">
@@ -264,25 +268,25 @@ const skills = [
         display: grid;
         grid-template-columns: 1.7fr 1fr;
         gap: clamp(2rem, 6vw, 5rem);
-        padding: clamp(3rem, 7vw, 6rem) 0 3rem;
+        padding: clamp(1.5rem, 3vw, 2.5rem) 0 1.5rem;
         align-items: center;
     }
     h1 {
-        margin: 1rem 0 1.5rem;
+        margin: 0 0 1rem;
         font-size: clamp(2.7rem, 5.6vw, 4.5rem);
         letter-spacing: -0.045em;
     }
+
     .lead {
         color: var(--muted);
-        font-size: 1.2rem;
-        max-width: 48ch;
+        font-size: 1rem;
     }
     .actions {
         display: flex;
         gap: 1rem 1.5rem;
         flex-wrap: wrap;
         align-items: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
         font-size: 1rem;
     }
     .primary-link {
@@ -297,7 +301,7 @@ const skills = [
         opacity: 0.8;
     }
     .education {
-        padding: 2rem;
+        padding: 1.25rem 2rem;
         border: 1px solid var(--border);
         border-top: 3px solid var(--sand);
         border-radius: var(--radius);
@@ -305,13 +309,13 @@ const skills = [
     }
     .education h2 {
         font-size: 1.7rem;
-        margin-top: 0.7rem;
+        margin-top: 0;
     }
     .education > p {
         color: var(--muted);
     }
     .education dl {
-        margin: 1.5rem 0;
+        margin: 0.75rem 0 0;
         font-size: 0.95rem;
     }
     .education dl div {
@@ -348,10 +352,10 @@ const skills = [
     }
     section[id] {
         scroll-margin-top: 7rem;
-        margin-top: 4.5rem;
+        margin-top: 2.5rem;
     }
     .section-heading {
-        margin-bottom: 2rem;
+        margin-bottom: 1.25rem;
     }
     .section-heading h2 {
         font-size: clamp(1.9rem, 4vw, 2.6rem);
@@ -471,7 +475,7 @@ const skills = [
     @media (max-width: 800px) {
         .portfolio-hero {
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 1.25rem;
         }
         .education {
             max-width: none;
@@ -496,13 +500,15 @@ const skills = [
         .experience-row {
             gap: 1rem;
         }
+        .education {
+            padding: 1rem 1.5rem;
+        }
         .work-body,
-        .education,
         .skills-grid div {
             padding: 1.5rem;
         }
         section[id] {
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
         .section-nav {
             gap: 1.2rem;

@@ -119,6 +119,11 @@ img {
 .site-header a[aria-current] {
   color: var(--sand);
 }
+.site-header a[aria-current="page"] {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.15em;
+}
 .skip-link {
   position: fixed;
   top: -6rem;
