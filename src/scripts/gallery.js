@@ -21,7 +21,8 @@ for (const gallery of document.querySelectorAll("[data-gallery]")) {
   }
   const dialog = gallery.querySelector("dialog");
   if (!dialog || typeof dialog.showModal !== "function") continue;
-  const image = dialog.querySelector("[data-expanded]");
+  let image = dialog.querySelector("[data-expanded]");
+  let pendingImage;
   const status = dialog.querySelector("[data-status]");
   const caption = dialog.querySelector("[data-caption-text]");
   const original = dialog.querySelector("[data-original]");
@@ -32,8 +33,27 @@ for (const gallery of document.querySelectorAll("[data-gallery]")) {
   function show(next) {
     index = (next + links.length) % links.length;
     const link = links[index];
-    image.alt = link.querySelector("img").alt;
-    image.src = link.href;
+    const thumbnail = link.querySelector("img");
+    const preview = image.cloneNode(false);
+    preview.alt = thumbnail.alt;
+    preview.src = thumbnail.currentSrc || thumbnail.src;
+    image.replaceWith(preview);
+    image = preview;
+
+    // Switch photos immediately; upgrade only the currently selected preview.
+    if (pendingImage) {
+      pendingImage.onload = null;
+      pendingImage.removeAttribute("src");
+    }
+    const fullImage = new Image();
+    pendingImage = fullImage;
+    fullImage.onload = () => {
+      if (image === preview && dialog.open) {
+        preview.src = fullImage.src;
+      }
+      if (pendingImage === fullImage) pendingImage = undefined;
+    };
+    fullImage.src = link.href;
     original.href = link.href;
     caption.textContent = link.dataset.caption;
     status.textContent = `${index + 1} / ${links.length}`;
@@ -72,6 +92,11 @@ for (const gallery of document.querySelectorAll("[data-gallery]")) {
   });
   dialog.addEventListener("close", () => {
     document.body.style.overflow = previousOverflow;
+    if (pendingImage) {
+      pendingImage.onload = null;
+      pendingImage.removeAttribute("src");
+      pendingImage = undefined;
+    }
     image.removeAttribute("src");
     trigger?.focus({ preventScroll: true });
   });
