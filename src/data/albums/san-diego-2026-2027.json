@@ -41,6 +41,26 @@
       "filename": "07.jpg",
       "thumbnail": "compressed/07.webp",
       "alt": "San Diego 2026–2027 — photo 07"
+    },
+    {
+      "filename": "08.jpg",
+      "thumbnail": "compressed/08.webp",
+      "alt": "San Diego 2026–2027 — photo 08"
+    },
+    {
+      "filename": "09.jpg",
+      "thumbnail": "compressed/09.webp",
+      "alt": "San Diego 2026–2027 — photo 09"
+    },
+    {
+      "filename": "10.jpg",
+      "thumbnail": "compressed/10.webp",
+      "alt": "San Diego 2026–2027 — photo 10"
+    },
+    {
+      "filename": "11.jpg",
+      "thumbnail": "compressed/11.webp",
+      "alt": "San Diego 2026–2027 — photo 11"
     }
   ]
 }
